@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="YOUR COMPANY — sample website by Global Plus" />
+  <title>YOUR COMPANY — Sample Website</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="gl-canvas"></canvas>
+  <canvas id="particle-canvas"></canvas>
+  <div class="grain-overlay"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-scroll="0">
+        <img src="images/logo.svg" alt="YOUR COMPANY" class="logo-img" />
+        <span class="logo-text">YOUR <span class="logo-accent">COMPANY</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-scroll="1" class="nav-link">Services</a></li>
+        <li><a href="#" data-scroll="2" class="nav-link">Gallery</a></li>
+        <li><a href="#" data-scroll="3" class="nav-link">About Studio</a></li>
+        <li><a href="#" data-scroll="4" class="nav-link">Advantages</a></li>
+        <li><a href="#" data-scroll="5" class="nav-link nav-cta">Join Now</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+  <div class="nav-drawer" id="nav-drawer" hidden>
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <ul class="drawer-links" id="drawer-links">
+      <li><a href="#" data-scroll="1" class="drawer-link">Services</a></li>
+      <li><a href="#" data-scroll="2" class="drawer-link">Gallery</a></li>
+      <li><a href="#" data-scroll="3" class="drawer-link">About Studio</a></li>
+      <li><a href="#" data-scroll="4" class="drawer-link">Advantages</a></li>
+      <li><a href="#" data-scroll="5" class="drawer-link">Join Now</a></li>
+    </ul>
+    <div class="drawer-contacts"></div>
+  </div>
+
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- HERO -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <img src="images/logo.svg" alt="YOUR COMPANY" class="hero-logo reveal-3d">
+          <div class="hero-badge reveal-3d">YOUR BRAND • YOUR NICHE • YOUR DIRECTION</div>
+          <h1 class="hero-title reveal-3d">YOUR COMPANY<br><span class="gradient-text">NAME HERE</span></h1>
+          <p class="hero-subtitle reveal-3d">Write your slogan, tagline, or a compelling offer — anything you want your visitors to see first.</p>
+          <div class="hero-cta-group reveal-3d">
+            <a href="#" data-scroll="5" class="btn-primary">Make a Button</a>
+            <a href="#" data-scroll="2" class="btn-outline">Your Links</a>
+          </div>
+          <div class="hero-scroll-hint"><div class="scroll-line"></div><span>scroll</span></div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Our Services</div>
+          <h2 class="section-title reveal-3d">Your <span class="gradient-text">Services</span></h2>
+          <p class="section-desc reveal-3d">Showcase your offerings to potential clients, just like in the examples below.</p>
+          <div class="services-grid reveal-3d">
+            <div class="service-card">
+              <div class="service-icon">✨</div>
+              <h3>Facial Cosmetology</h3>
+              <p>Deep cleansing, peels, mesotherapy, biorevitalization. Advanced treatments using premium-grade equipment.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💅</div>
+              <h3>Manicure & Pedicure</h3>
+              <p>Machine and combination manicure. Nail art, strengthening, extensions. Premium coatings.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💆</div>
+              <h3>SPA Programs</h3>
+              <p>Massage, body wraps, aromatherapy. Signature SPA rituals for complete relaxation and rejuvenation.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">⚡</div>
+              <h3>Laser Hair Removal</h3>
+              <p>Latest-generation diode laser. Painless hair removal for all skin types. Permanent results.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💇</div>
+              <h3>Hair Styling & Color</h3>
+              <p>Haircuts, coloring, blowouts. Signature airtouch, balayage, and shatush techniques by top stylists.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💎</div>
+              <h3>Injectable Aesthetics</h3>
+              <p>Botox, dermal fillers, thread lifting. Board-certified aesthetic practitioners.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="page" data-index="2" id="collections">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Portfolio</div>
+          <h2 class="section-title reveal-3d">Showcase Your <span class="gradient-text">Best Work Here</span></h2>
+          <p class="section-desc reveal-3d">Add what will impress everyone</p>
+          <div class="collections-grid reveal-3d">
+            <div class="collection-card card-large">
+              <img src="images/hero-coat.png" alt="Studio Interior" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Featured Work</span>
+                <h3>Project "Alpha"</h3>
+                <p>Description of your first portfolio project</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <img src="images/hats.png" alt="SPA Room" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Featured Work</span>
+                <h3>Project "Meridian"</h3>
+                <p>Description of your second project — share the details</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <img src="images/texture.png" alt="Cosmetics" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Featured Work</span>
+                <h3>Project "Aurora"</h3>
+                <p>Third project — showcase results and craftsmanship</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="page" data-index="3" id="production">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Process</div>
+          <h2 class="section-title reveal-3d">The Path to<br><span class="gradient-text">Perfection</span></h2>
+          <p class="section-desc reveal-3d">Tell your clients how the collaboration process works, as shown below</p>
+          <div class="production-layout reveal-3d">
+            <div class="production-image-wrap">
+              <img src="images/workshop.png" alt="Workspace" class="production-img" />
+            </div>
+            <div class="production-stats">
+              <div class="stat-card">
+                <span class="stat-number">8+</span>
+                <span class="stat-label">years of flawless service</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">5000+</span>
+                <span class="stat-label">satisfied clients</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">certified cosmetics</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">specialists on staff</span>
+              </div>
+              <div class="production-steps">
+                <div class="prod-step"><span class="step-num">01</span><span class="step-text">Consultation and skin / hair diagnostics</span></div>
+                <div class="prod-step"><span class="step-num">02</span><span class="step-text">Customized treatment plan selection</span></div>
+                <div class="prod-step"><span class="step-num">03</span><span class="step-text">Treatment in a private suite</span></div>
+                <div class="prod-step"><span class="step-num">04</span><span class="step-text">At-home care recommendations</span></div>
+                <div class="prod-step"><span class="step-num">05</span><span class="step-text">Results monitoring and adjustments</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="page" data-index="4" id="about">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Why Choose Us</div>
+          <h2 class="section-title reveal-3d"><span class="gradient-text">About</span></h2>
+          <p class="section-desc reveal-3d">Share your achievements and client testimonials</p>
+          <div class="about-grid reveal-3d">
+            <div class="about-card">
+              <div class="about-icon">👩‍⚕️</div>
+              <h3>Certified Professionals</h3>
+              <p>All specialists hold medical degrees and international certifications. Ongoing professional development.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🧴</div>
+              <h3>Premium Cosmetics</h3>
+              <p>We work exclusively with top brands: Dermaceutic, Mesoestetic, Holy Land, Christina. No compromises.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🛡️</div>
+              <h3>Sterility & Safety</h3>
+              <p>Single-use materials, instrument autoclaving, and batch-verified certified products.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🎯</div>
+              <h3>Personalized Programs</h3>
+              <p>Not a cookie-cutter approach but a personalized beauty strategy. We guide every client toward their ideal results.</p>
+            </div>
+          </div>
+          <div class="about-cta reveal-3d"></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Contact</div>
+          <h2 class="section-title reveal-3d">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-desc reveal-3d">Provide your contact details so clients can reach you</p>
+          <div class="contact-layout reveal-3d" style="display:flex;justify-content:center;">
+              <div class="contact-info-card">
+                <h3>Contact</h3>
+                <div class="contact-item"><span class="contact-icon">📞</span><div><strong>Phone</strong><a href="tel:#">YOUR PHONE</a></div></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><div><strong>Email</strong><a href="mailto:#">YOUR EMAIL</a></div></div>
+                <div class="contact-item"><span class="contact-icon">📍</span><div><strong>Address</strong><span>YOUR ADDRESS</span></div></div>
+                <div class="contact-item"><span class="contact-icon">⏰</span><div><strong>Business Hours</strong><span>Mon-Fri: 9:00 AM - 6:00 PM</span></div></div>
+              </div>
+              
+          </div>
+<div style="text-align:center;margin-top:32px"><a href="https://unityspirit.github.io/global-plus-en/#page-4" class="btn-outline" style="font-size:16px;padding:14px 40px;display:inline-block;text-decoration:none">BACK TO MAIN</a></div>
+        <footer class="footer">
+          <div class="footer-inner">
+            <span class="footer-logo">YOUR COMPANY</span>
+            <span class="footer-copy">© 2026 YOUR COMPANY. Your description.</span>
+            
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

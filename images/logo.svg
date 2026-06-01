@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="16" fill="#06040a"/>
+  <rect x="2" y="2" width="116" height="116" rx="14" stroke="#c9a84c" stroke-width="2" fill="none"/>
+  <!-- Lotus flower icon -->
+  <g transform="translate(60, 42)" fill="none" stroke="#c9a84c" stroke-width="2">
+    <ellipse cx="0" cy="-8" rx="8" ry="18" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-8" rx="8" ry="18" transform="rotate(36)"/>
+    <ellipse cx="0" cy="-8" rx="8" ry="18" transform="rotate(-36)"/>
+    <ellipse cx="0" cy="-8" rx="8" ry="18" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-8" rx="8" ry="18" transform="rotate(-72)"/>
+    <circle cx="0" cy="0" r="4" fill="#c9a84c"/>
+  </g>
+  <text x="60" y="84" text-anchor="middle" fill="#c9a84c" font-family="serif" font-size="10" font-weight="600" letter-spacing="3">BEAUTY</text>
+  <text x="60" y="100" text-anchor="middle" fill="#e8c97a" font-family="serif" font-size="7.5" font-weight="400" letter-spacing="4">STUDIO</text>
+  <line x1="30" y1="88" x2="90" y2="88" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+</svg>
