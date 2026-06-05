@@ -490,6 +490,7 @@ p, h1, h2, h3, h4, span:not(.gradient-text):not(.logo-accent):not(.stat-number):
   .production-img { height: 220px; }
   .about-grid { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }
+  .contact-info-card { max-width: 100%; width: 100%; box-sizing: border-box; padding: 20px 16px; }
   .hero-cta-group { flex-direction: column; align-items: center; }
   .production-stats { grid-template-columns: 1fr 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
